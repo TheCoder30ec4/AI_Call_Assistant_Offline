@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Call Summary - AI Call Assistant</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error": "#ffffff", surface: "#f9f9f9", tertiary: "#000000", outline: "#78767b", "secondary-fixed": "#e3e1ec", "surface-container-lowest": "#ffffff", "on-background": "#1a1c1c", "surface-tint": "#5f5e60", "inverse-on-surface": "#f0f1f1", primary: "#000000", "on-tertiary-fixed": "#1f1a1a", "surface-container-low": "#f3f3f4", "inverse-primary": "#c8c6c8", "primary-fixed": "#e5e1e4", "on-surface": "#1a1c1c", "on-tertiary-fixed-variant": "#4c4545", "on-primary-fixed-variant": "#474649", "on-error-container": "#93000a", "surface-container-highest": "#e2e2e2", "surface-container-high": "#e8e8e8", error: "#ba1a1a", "on-primary-fixed": "#1c1b1d", secondary: "#5d5e66", "tertiary-fixed-dim": "#cec4c4", "inverse-surface": "#2f3131", "primary-fixed-dim": "#c8c6c8", "on-secondary": "#ffffff", "primary-container": "#1c1b1d", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "surface-bright": "#f9f9f9", "on-surface-variant": "#47464a", "surface-variant": "#e2e2e2", "on-tertiary-container": "#8a8282", "on-secondary-container": "#63646c", "on-primary": "#ffffff", "secondary-fixed-dim": "#c6c5cf", background: "#f9f9f9", "on-primary-container": "#858386", "tertiary-fixed": "#ebe0df", "surface-container": "#eeeeee", "on-secondary-fixed-variant": "#46464e", "tertiary-container": "#1f1a1a", "surface-dim": "#dadada", "secondary-container": "#e3e1ec", "outline-variant": "#c8c5ca", "on-secondary-fixed": "#1a1b22"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, fontFamily: {"headline-md": ["Geist", "sans-serif"], "headline-lg": ["Geist", "sans-serif"], "display-lg": ["Geist", "sans-serif"], "label-md": ["Geist", "sans-serif"], "headline-sm": ["Geist", "sans-serif"], "body-sm": ["Geist", "sans-serif"], "body-md": ["Geist", "sans-serif"], "body-lg": ["Geist", "sans-serif"], "label-lg": ["Geist", "sans-serif"], "label-sm": ["Geist", "sans-serif"], headline: ["Geist"], display: ["Geist"], body: ["Geist"], label: ["Geist"]}, fontSize: {"headline-md": ["24px", {lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "headline-sm": ["20px", {lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}]}}}}
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-black selection:text-white font-body-md text-body-md">
+<div class="max-w-screen-md mx-auto min-h-screen flex flex-col pb-32">
+<!-- Top Bar Navigation -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md px-4 h-16 flex items-center justify-between border-b border-black/[0.08]"><div class="flex items-center gap-3">
+<button aria-label="Go back" class="h-9 w-9 rounded-md hover:bg-neutral-100 active:scale-95 transition-colors text-black flex items-center justify-center border border-black/10 bg-white">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="text-base font-semibold text-black tracking-tight">Call Summary</h1>
+<span class="text-xs text-neutral-500 font-medium">Today at 10:42 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Share summary" class="h-9 w-9 rounded-md hover:bg-neutral-100 active:scale-95 transition-colors text-neutral-700 flex items-center justify-center border border-black/10 bg-white">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button aria-label="More options" class="h-9 w-9 rounded-md hover:bg-neutral-100 active:scale-95 transition-colors text-neutral-700 flex items-center justify-center border border-black/10 bg-white">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div></header>
+<main class="flex-1 px-4 pt-4 space-y-4">
+<!-- Honesty & Legal Privacy Disclosure Banner -->
+<div class="rounded-2xl bg-neutral-100/70 border border-black/[0.08] p-4 flex items-start gap-3 shadow-none">
+<div class="p-1.5 rounded-lg bg-black text-white shrink-0 mt-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="space-y-1 text-left flex-1">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-black uppercase">Legal &amp; Privacy Disclosure</span>
+<span class="text-[11px] text-neutral-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> Encrypted Vault
+            </span>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed font-normal">
+            The AI explicitly informed the caller that it is an automated assistant and this call was recorded locally to your device storage. Zero voice data left this device.
+          </p>
+</div>
+</div>
+<!-- Caller Header Bento Card -->
+<div class="bg-white rounded-2xl p-5 border border-black/[0.08] shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-neutral-100 border border-black/[0.06] flex items-center justify-center text-black font-semibold text-lg">
+              DL
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-xl md:text-2xl text-black tracking-tight font-bold">Dr. Sarah Lin</h2>
+<span class="material-symbols-outlined text-black text-[20px]" title="Verified Contact">check_circle</span>
+</div>
+<p class="text-xs text-neutral-500 mt-0.5 font-medium">+1 (555) 234-8901 • Dental Associates</p>
+</div>
+</div>
+</div>
+<!-- Metadata Pills Row -->
+<div class="mt-4 pt-3 border-t border-black/[0.06] flex flex-wrap items-center gap-2"><span class="inline-flex items-center gap-1.5 bg-neutral-100 border border-black/[0.08] px-2.5 py-1 rounded-md text-xs text-neutral-700 font-medium">
+<span class="material-symbols-outlined text-[14px] text-black">timer</span>
+Duration: 1m 24s
+</span>
+<span class="inline-flex items-center gap-1.5 bg-neutral-200/80 border border-black/[0.08] px-2.5 py-1 rounded-md text-xs text-black font-semibold">
+<span class="material-symbols-outlined text-[14px] text-black">memory</span>
+100% On-Device AI Handled
+</span>
+<span class="inline-flex items-center gap-1.5 bg-neutral-100 border border-black/[0.08] px-2.5 py-1 rounded-md text-xs text-neutral-600 font-medium ml-auto">
+<span class="material-symbols-outlined text-[14px] text-neutral-500">call_received</span>
+Inbound Call
+</span></div>
+</div>
+<!-- Structured Executive Summary Card -->
+<section class="bg-white rounded-2xl p-5 border border-black/[0.08] shadow-sm space-y-4"><div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-black text-[22px]">summarize</span>
+<h3 class="text-base text-black font-bold tracking-tight">Structured Memo</h3>
+</div>
+<!-- Urgency Badge (shadcn badge) -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-neutral-100 text-black font-medium text-xs border border-black/10">
+<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+Urgency: Medium
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Field: Caller Identity -->
+<div class="bg-neutral-50 p-3.5 rounded-xl border border-black/[0.06] flex flex-col justify-between">
+<span class="text-[11px] font-semibold text-neutral-500 flex items-center gap-1.5 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[15px]">badge</span> Caller Entity
+</span>
+<p class="text-sm text-black font-semibold mt-1">Dr. Sarah Lin (Reception)</p>
+</div>
+<!-- Field: Callback Number -->
+<div class="bg-neutral-50 p-3.5 rounded-xl border border-black/[0.06] flex items-center justify-between">
+<div>
+<span class="text-[11px] font-semibold text-neutral-500 flex items-center gap-1.5 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[15px]">contact_phone</span> Callback Number
+</span>
+<p class="text-sm text-black font-bold mt-1">+1 (555) 234-8901</p>
+</div>
+<a class="px-3 py-1.5 bg-black text-white hover:bg-neutral-800 rounded-md text-xs font-medium flex items-center gap-1.5 transition-colors shadow-sm active:scale-95" href="tel:5552348901">
+<span class="material-symbols-outlined text-[14px]">call</span> Call
+</a>
+</div>
+<!-- Field: Key Message (Spans full width) -->
+<div class="bg-neutral-50 p-3.5 rounded-xl border border-black/[0.06] md:col-span-2">
+<span class="text-[11px] font-semibold text-neutral-500 flex items-center gap-1.5 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[15px]">event_available</span> Appointment / Message Intent
+</span>
+<p class="text-sm text-neutral-900 font-medium mt-1 leading-relaxed">
+Confirmed cleaning appointment for <strong class="text-black font-bold underline decoration-black/30 underline-offset-2">Thursday, Oct 24 at 2:00 PM</strong>.
+</p>
+</div>
+<!-- Field: Action Items & Questions -->
+<div class="bg-neutral-50 p-3.5 rounded-xl border border-black/[0.06] md:col-span-2">
+<span class="text-[11px] font-semibold text-neutral-500 flex items-center gap-1.5 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[15px]">help_outline</span> Questions &amp; Reminders
+</span>
+<p class="text-sm text-neutral-600 font-normal mt-1 leading-relaxed">
+Asked to bring insurance card if dental provider details have changed since last visit.
+</p>
+</div>
+</div></section>
+<!-- Stereo Recording Player Card -->
+<section class="bg-white rounded-2xl p-5 border border-black/[0.08] shadow-sm space-y-4"><div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-black text-[22px]">new_window</span>
+<h3 class="text-base text-black font-bold tracking-tight">Stereo Dual-Track Recording</h3>
+</div>
+<span class="text-xs bg-neutral-100 border border-black/[0.08] px-2.5 py-1 rounded-md text-neutral-700 font-medium">
+Lossless FLAC • On-Device
+</span>
+</div>
+<!-- Channel split legend tag - sharp rounded-md -->
+<div class="flex items-center justify-center gap-4 bg-neutral-50 py-1.5 px-3 rounded-md border border-black/[0.08] text-xs">
+<span class="flex items-center gap-1.5 text-neutral-600 font-medium">
+<span class="w-2 h-2 rounded-sm bg-neutral-400"></span>
+<strong>Left (L):</strong> Caller
+</span>
+<span class="text-neutral-300">•</span>
+<span class="flex items-center gap-1.5 text-black font-medium">
+<span class="w-2 h-2 rounded-sm bg-black"></span>
+<strong>Right (R):</strong> AI Assistant
+</span>
+</div>
+<!-- Dual Waveform Mock Visualizer -->
+<div class="relative bg-neutral-50 rounded-xl p-4 border border-black/[0.06] space-y-2">
+<!-- Waveform tracks -->
+<div class="h-16 flex items-center justify-between gap-1 px-1">
+<div class="w-1.5 bg-black h-6 rounded-sm"></div>
+<div class="w-1.5 bg-black h-9 rounded-sm"></div>
+<div class="w-1.5 bg-black h-12 rounded-sm"></div>
+<div class="w-1.5 bg-black h-5 rounded-sm"></div>
+<div class="w-1.5 bg-black h-8 rounded-sm"></div>
+<div class="w-1.5 bg-black h-14 rounded-sm"></div>
+<div class="w-1.5 bg-black h-10 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-400 h-7 rounded-sm opacity-70"></div>
+<div class="w-1.5 bg-neutral-400 h-11 rounded-sm opacity-70"></div>
+<div class="w-1.5 bg-neutral-400 h-15 rounded-sm opacity-70"></div>
+<div class="w-1.5 bg-black h-10 rounded-sm"></div>
+<div class="w-1.5 bg-black h-4 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-12 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-8 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-14 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-6 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-3 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-10 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-7 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-13 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-5 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-9 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-11 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-4 rounded-sm"></div>
+<div class="w-1.5 bg-neutral-300 h-2 rounded-sm"></div>
+</div>
+<!-- Playhead Scrub Line -->
+<div class="w-full bg-neutral-200 h-1.5 rounded-sm overflow-hidden relative">
+<div class="bg-black h-full rounded-sm" style="width: 41%;"></div>
+</div>
+<!-- Time Codes -->
+<div class="flex justify-between items-center text-xs text-neutral-500 pt-1 font-mono">
+<span class="">0:34</span>
+<span class="text-neutral-700 font-medium font-sans">Scrubbing Left/Right Stereo</span>
+<span class="">1:24</span>
+</div>
+</div>
+<!-- Audio Controls Row - shadcn sharp button styling -->
+<div class="flex items-center justify-center gap-4 pt-1">
+<button class="h-10 w-10 text-neutral-700 hover:text-black hover:bg-neutral-100 border border-black/10 bg-white rounded-md transition-colors active:scale-95 flex items-center justify-center" title="Skip 10 seconds backward">
+<span class="material-symbols-outlined text-[22px]">replay_10</span>
+</button>
+<button class="h-11 px-5 bg-black text-white rounded-md flex items-center justify-center gap-2 shadow-sm hover:bg-neutral-800 active:scale-95 transition-all text-sm font-medium" title="Play / Pause">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="">Pause</span>
+</button>
+<button class="h-10 w-10 text-neutral-700 hover:text-black hover:bg-neutral-100 border border-black/10 bg-white rounded-md transition-colors active:scale-95 flex items-center justify-center" title="Skip 10 seconds forward">
+<span class="material-symbols-outlined text-[22px]">forward_10</span>
+</button>
+</div></section>
+<!-- Turn-by-Turn Conversation Transcript Section -->
+<section class="space-y-3 pt-2">
+<div class="flex items-center justify-between px-1">
+<div>
+<h3 class="text-base text-black font-bold">Conversation Transcript</h3>
+<p class="text-xs text-neutral-500 font-normal">Whisper On-Device Neural Engine • Zero Cloud Processing</p>
+</div>
+<button class="text-neutral-900 border border-black/10 bg-white hover:bg-neutral-100 text-xs font-medium px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors shadow-none active:scale-95">
+<span class="material-symbols-outlined text-[15px]">content_copy</span> Copy
+</button>
+</div>
+<!-- Chat Stream -->
+<div class="space-y-3.5">
+<!-- Message 1: AI Assistant -->
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-center gap-2 ml-1">
+<span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[15px]">smart_toy</span>
+</span>
+<span class="text-xs text-black font-bold">AI Assistant</span>
+<span class="text-xs text-neutral-400">• 00:03</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-neutral-200 text-black">R-CHANNEL</span>
+</div>
+<div class="max-w-[88%] bg-neutral-100 border border-black/[0.06] rounded-2xl rounded-tl-sm p-3.5 text-black text-sm shadow-none font-normal">
+              Hello, you've reached Alex Mercer's phone. I'm an on-device AI assistant. Alex is unavailable, but I can take a message and pass it along. Please note this call is recorded.
+            </div>
+</div>
+<!-- Message 2: Caller -->
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-2 mr-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-neutral-100 text-neutral-600 border border-black/[0.06]">L-CHANNEL</span>
+<span class="text-xs text-neutral-400">00:18 •</span>
+<span class="text-xs text-black font-bold">Dr. Sarah Lin (Reception)</span>
+<span class="w-6 h-6 rounded-full bg-neutral-200 text-black flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[15px]">person</span>
+</span>
+</div>
+<div class="max-w-[88%] bg-white border border-black/[0.08] rounded-2xl rounded-tr-sm p-3.5 text-black text-sm shadow-sm font-normal">
+              Hi there! This is Dr. Lin's dental office calling for Alex to confirm his routine dental checkup and teeth cleaning this Thursday at 2 PM.
+            </div>
+</div>
+<!-- Message 3: AI Assistant -->
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-center gap-2 ml-1">
+<span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[15px]">smart_toy</span>
+</span>
+<span class="text-xs text-black font-bold">AI Assistant</span>
+<span class="text-xs text-neutral-400">• 00:32</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-neutral-200 text-black">R-CHANNEL</span>
+</div>
+<div class="max-w-[88%] bg-neutral-100 border border-black/[0.06] rounded-2xl rounded-tl-sm p-3.5 text-black text-sm shadow-none font-normal">
+              Got it, Thursday at 2:00 PM for the dental checkup. Is there anything specific Alex should bring or know?
+            </div>
+</div>
+<!-- Message 4: Caller -->
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-2 mr-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-neutral-100 text-neutral-600 border border-black/[0.06]">L-CHANNEL</span>
+<span class="text-xs text-neutral-400">00:46 •</span>
+<span class="text-xs text-black font-bold">Dr. Sarah Lin (Reception)</span>
+<span class="w-6 h-6 rounded-full bg-neutral-200 text-black flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[15px]">person</span>
+</span>
+</div>
+<div class="max-w-[88%] bg-white border border-black/[0.08] rounded-2xl rounded-tr-sm p-3.5 text-black text-sm shadow-sm font-normal">
+              Just remember to bring your dental insurance card if provider details have changed. If that time doesn't work, please give us a call back at 555-234-8901. Thank you!
+            </div>
+</div>
+<!-- Message 5: AI Assistant -->
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-center gap-2 ml-1">
+<span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[15px]">smart_toy</span>
+</span>
+<span class="text-xs text-black font-bold">AI Assistant</span>
+<span class="text-xs text-neutral-400">• 01:14</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-neutral-200 text-black">R-CHANNEL</span>
+</div>
+<div class="max-w-[88%] bg-neutral-100 border border-black/[0.06] rounded-2xl rounded-tl-sm p-3.5 text-black text-sm shadow-none font-normal">
+              Thank you, I've noted that down and will notify Alex immediately. Have a great day.
+            </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Floating Sticky Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-t border-black/[0.08] py-3 px-4"><div class="max-w-screen-md mx-auto flex items-center gap-3">
+<!-- Secondary Button: Export Transcript (shadcn outline variant) -->
+<button class="flex-1 h-11 rounded-md border border-black/20 bg-white text-black text-sm font-medium hover:bg-neutral-100 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+Export Transcript
+</button>
+<!-- Primary Button: Call Back (shadcn solid primary variant) -->
+<a class="flex-1 h-11 rounded-md bg-black text-white text-sm font-medium hover:bg-neutral-800 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-sm" href="tel:5552348901">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+Call Back
+</a>
+</div></div>
+</div>
+
+
+</body></html>

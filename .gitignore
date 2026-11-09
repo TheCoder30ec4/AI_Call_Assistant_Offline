@@ -1,0 +1,27 @@
+# Build output
+build/
+.gradle/
+.kotlin/
+*.apk
+*.aab
+*.idsig
+
+# Machine-specific
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# Signing: never commit the release key or its passwords
+keystore.properties
+*.jks
+*.keystore
+lineage.bin
+
+# AI models are downloaded by get_models.sh, not stored in git
+models/
+*.litertlm
+*.onnx
+
+# Raw Stitch API export (private project IDs); the HTML and JPG mockups are kept
+poc/ai-call-assistant/design/screens.json

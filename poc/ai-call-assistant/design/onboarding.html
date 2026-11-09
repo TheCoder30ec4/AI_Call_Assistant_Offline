@@ -1,0 +1,171 @@
+<!DOCTYPE html><html class="" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Setup AI Call Assistant - Onboarding</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error": "#ffffff",
+          "surface": "#f9f9f9",
+          "tertiary": "#000000",
+          "outline": "#78767b",
+          "secondary-fixed": "#e3e1ec",
+          "surface-container-lowest": "#ffffff",
+          "on-background": "#1a1c1c",
+          "surface-tint": "#5f5e60",
+          "inverse-on-surface": "#f0f1f1",
+          "primary": "#000000",
+          "on-tertiary-fixed": "#1f1a1a",
+          "surface-container-low": "#f3f3f4",
+          "inverse-primary": "#c8c6c8",
+          "primary-fixed": "#e5e1e4",
+          "on-surface": "#1a1c1c",
+          "on-tertiary-fixed-variant": "#4c4545",
+          "on-primary-fixed-variant": "#474649",
+          "on-error-container": "#93000a",
+          "surface-container-highest": "#e2e2e2",
+          "surface-container-high": "#e8e8e8",
+          "error": "#ba1a1a",
+          "on-primary-fixed": "#1c1b1d",
+          "secondary": "#5d5e66",
+          "tertiary-fixed-dim": "#cec4c4",
+          "inverse-surface": "#2f3131",
+          "primary-fixed-dim": "#c8c6c8",
+          "on-secondary": "#ffffff",
+          "primary-container": "#1c1b1d",
+          "error-container": "#ffdad6",
+          "on-tertiary": "#ffffff",
+          "surface-bright": "#f9f9f9",
+          "on-surface-variant": "#47464a",
+          "surface-variant": "#e2e2e2",
+          "on-tertiary-container": "#8a8282",
+          "on-secondary-container": "#63646c",
+          "on-primary": "#ffffff",
+          "secondary-fixed-dim": "#c6c5cf",
+          "background": "#f9f9f9",
+          "on-primary-container": "#858386",
+          "tertiary-fixed": "#ebe0df",
+          "surface-container": "#eeeeee",
+          "on-secondary-fixed-variant": "#46464e",
+          "tertiary-container": "#1f1a1a",
+          "surface-dim": "#dadada",
+          "secondary-container": "#e3e1ec",
+          "outline-variant": "#c8c5ca",
+          "on-secondary-fixed": "#1a1b22"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "space-xs": "0.25rem",
+          "gutter-compact": "0.75rem",
+          "space-lg": "1.5rem",
+          "margin": "1.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-expanded": "2rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Geist"],
+          "headline-lg": ["Geist"],
+          "display-lg": ["Geist"],
+          "label-md": ["Geist"],
+          "display-lg-mobile": ["Geist"],
+          "headline-sm": ["Geist"],
+          "body-sm": ["Geist"],
+          "body-md": ["Geist"],
+          "body-lg": ["Geist"],
+          "label-lg": ["Geist"],
+          "label-sm": ["Geist"]
+        },
+        "fontSize": {
+          "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+          "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "display-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "display-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+          "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }]
+        }
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Geist', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-neutral-800 selection:text-white">
+<!-- Top App Bar -->
+<header class="bg-surface border-b border-neutral-200 flex justify-between items-center w-full px-4 h-16 max-w-screen-md mx-auto sticky top-0 z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-neutral-100 border border-neutral-300 flex items-center justify-center text-black">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div>
+<h1 class="text-base font-semibold text-black tracking-tight">AI Call Assistant</h1>
+<p class="text-label-sm font-label-sm text-neutral-500">Step 2 of 3 • Permission Setup</p>
+</div>
+</div>
+<!-- Step Indicator Progress Dots (Monochrome) -->
+<div aria-label="Step progress indicator" class="flex items-center gap-1.5"><div class="h-1.5 w-3 rounded-sm bg-neutral-300"></div><div class="h-1.5 w-6 rounded-sm bg-neutral-900"></div><div class="h-1.5 w-3 rounded-sm bg-neutral-200"></div></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-screen-md mx-auto px-4 py-5 pb-32">
+<!-- Screen Header Section -->
+<div class="mb-6">
+<h2 class="text-headline-md sm:text-headline-lg text-black font-semibold tracking-tight">
+        Get started in under a minute
+      </h2>
+<p class="text-body-md text-neutral-600 mt-1.5">
+        Private, automatic, and always runs on your phone.
+      </p>
+<!-- Privacy Badge Chip (Monochrome) -->
+<div class="inline-flex items-center gap-1.5 mt-3 px-2.5 py-0.5 rounded-md bg-neutral-100 border border-neutral-200 text-neutral-900 text-xs font-medium tracking-wide shadow-xs"><span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span><span class="uppercase font-semibold tracking-wider text-[11px]">100% ON-DEVICE • ZERO CLOUD</span></div>
+</div>
+<!-- Step Flow Presentation -->
+<div class="flex flex-col gap-4">
+<!-- Step 1 Summary Chip (Completed) -->
+<div class="flex items-center justify-between bg-white border border-neutral-200 rounded-lg px-4 py-3 shadow-xs"><div class="flex items-center gap-3"><div class="w-6 h-6 rounded-md bg-neutral-900 text-white flex items-center justify-center"><span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span></div><div><span class="text-xs font-semibold text-neutral-500">Step 1 Completed</span><p class="text-sm font-medium text-neutral-900">Privacy Promise: 100% on-device AI model verified.</p></div></div><span class="material-symbols-outlined text-neutral-400 text-lg" data-icon="lock">lock</span></div>
+<!-- Step 2: Active Prominent Card -->
+<section class="bg-white rounded-lg border-2 border-neutral-900 p-5 shadow-xs relative overflow-hidden"><div class="flex items-center justify-between mb-3"><span class="text-[11px] bg-neutral-900 text-neutral-50 px-2 py-0.5 rounded-md uppercase tracking-wider font-semibold shadow-xs">Active Setup</span><span class="text-xs text-neutral-600 font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="sync">sync</span>Ready to pair</span></div><h3 class="text-headline-sm font-semibold text-neutral-900">Step 2: Connect Call Audio Helper</h3><p class="text-body-md text-neutral-600 mt-2 leading-relaxed">To answer calls in the background and transcribe audio when you can't pick up, Android requires accessibility and call companion access.</p><div class="my-4 p-4 rounded-lg bg-neutral-50 border border-neutral-200"><div class="text-xs font-semibold text-neutral-500 mb-3 tracking-wider">VERIFIED LOCAL HARDWARE ROUTING</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-stretch"><div class="bg-white rounded-md p-3 border border-neutral-200 flex flex-col justify-between shadow-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-md bg-neutral-100 border border-neutral-200 text-neutral-900 flex items-center justify-center"><span class="material-symbols-outlined text-lg" data-icon="volume_up">volume_up</span></div><div><p class="text-xs text-neutral-500 font-medium">CALL AUDIO</p><p class="text-sm font-semibold text-neutral-900">In-Call Stream</p></div></div><span class="material-symbols-outlined text-neutral-400" data-icon="arrow_forward">arrow_forward</span><div class="w-8 h-8 rounded-md bg-neutral-900 text-white flex items-center justify-center"><span class="material-symbols-outlined text-lg" data-icon="memory">memory</span></div></div><div class="mt-3 pt-2 border-t border-neutral-100 flex items-center gap-1.5"><span class="material-symbols-outlined text-neutral-900 text-sm" data-icon="check_circle">check_circle</span><span class="text-xs text-neutral-700 font-medium">Direct to Phone NPU (Isolated)</span></div></div><div class="bg-white rounded-md p-3 border border-neutral-200 flex flex-col justify-between shadow-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-md bg-neutral-100 border border-neutral-200 text-neutral-400 flex items-center justify-center"><span class="material-symbols-outlined text-lg" data-icon="call">call</span></div><div><p class="text-xs text-neutral-400">OUTBOUND</p><p class="text-sm text-neutral-500">Cloud Server</p></div></div><div class="relative w-8 h-8 rounded-md bg-neutral-100 border border-neutral-200 text-neutral-500 flex items-center justify-center"><span class="material-symbols-outlined text-lg" data-icon="cloud_off">cloud_off</span></div></div><div class="mt-3 pt-2 border-t border-neutral-100 flex items-center gap-1.5"><span class="material-symbols-outlined text-neutral-400 text-sm" data-icon="block">block</span><span class="text-xs text-neutral-500">Remote Ingestion Disallowed</span></div></div></div><div class="mt-3 flex items-center gap-2 text-neutral-600"><span class="material-symbols-outlined text-neutral-900 text-base" data-icon="verified">verified</span><p class="text-xs">Trust note: <strong class="text-neutral-900 font-semibold">No data leaves your handset.</strong> Verified local sandbox.</p></div></div><button class="w-full h-10 bg-neutral-900 text-neutral-50 font-medium text-sm rounded-md flex items-center justify-center gap-2 hover:bg-neutral-800 active:scale-[0.99] transition-all shadow-xs"><span class="material-symbols-outlined text-base" data-icon="settings_accessibility">settings_accessibility</span><span class="">Connect Helper Service</span></button></section>
+<!-- Step 3: Preview Card -->
+<section class="bg-white rounded-lg border border-neutral-200 p-5 shadow-xs"><div class="flex items-center justify-between mb-2"><span class="text-xs font-semibold text-neutral-500 tracking-wider">UPCOMING</span><span class="text-xs text-neutral-400">Step 3 of 3</span></div><h3 class="text-headline-sm font-semibold text-neutral-900">Step 3: Assistant Profile &amp; Permissions</h3><p class="text-body-md text-neutral-600 mt-1 mb-4">Personalize voice persona and grant notification dispatch for missed call summaries.</p><div class="space-y-3"><div><label class="block text-xs font-medium text-neutral-500 mb-1.5">AI Persona Name</label><div class="flex items-center border border-neutral-200 rounded-md px-3 py-2 bg-neutral-50"><span class="material-symbols-outlined text-neutral-500 text-lg mr-2" data-icon="smart_toy">smart_toy</span><span class="text-sm text-neutral-900">Aria (Executive Screening)</span><button type="button" class="ml-auto text-xs font-medium text-neutral-700 hover:text-neutral-900 border border-neutral-200 bg-white px-2 py-1 rounded-sm shadow-xs transition-colors">Edit in Step 3</button></div></div><div class="rounded-lg border border-neutral-200 bg-white p-3.5 shadow-xs"><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-md bg-neutral-100 border border-neutral-200 flex items-center justify-center text-neutral-900"><span class="material-symbols-outlined text-lg" data-icon="notifications">notifications</span></div><div class="flex-1"><p class="text-sm font-semibold text-neutral-900">Allow AI Call Assistant to send notifications?</p><p class="text-xs text-neutral-500 mt-0.5">Required to show instant caller transcripts and callback actions.</p><div class="mt-3 flex justify-end gap-2"><button type="button" class="px-3 py-1.5 text-xs text-neutral-700 font-medium rounded-md bg-white border border-neutral-200 hover:bg-neutral-50 shadow-xs transition-colors">Don't allow</button><button type="button" class="px-3 py-1.5 text-xs text-neutral-50 font-medium rounded-md bg-neutral-900 hover:bg-neutral-800 shadow-xs transition-colors">Allow</button></div></div></div></div></div></section>
+</div>
+</main>
+<!-- Floating Sticky Bottom Controls -->
+<footer class="fixed bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md border-t border-neutral-200 py-3 px-4 z-50">
+<div class="max-w-screen-md mx-auto flex flex-col sm:flex-row items-center justify-between gap-3"><button class="w-full sm:w-auto px-4 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 rounded-md border border-transparent hover:border-neutral-200 hover:bg-neutral-50 transition-colors order-2 sm:order-1">Skip for now</button><div class="w-full sm:w-auto flex items-center gap-3 order-1 sm:order-2"><button class="w-full sm:w-auto min-w-[160px] h-10 px-5 bg-neutral-900 text-neutral-50 text-sm font-medium rounded-md flex items-center justify-center gap-2 hover:bg-neutral-800 active:scale-[0.99] transition-all shadow-xs"><span class="">Next Step</span><span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span></button></div></div>
+</footer>
+
+
+</body></html>
